@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<afc xmlns="http://www.mscsoftware.com/:vfc" xmlns:afc="http://www.mscsoftware.com/:afc">
+     <afc:Bibliography>
+          <File schema="afc" version="2.0.0.0" URI="file://C:/HBK/Dev/vigrade/development/VI-CRT/v2026.1/TMP/objects/rear_differential_locked.xml" publicationDate="2025-09-24 15:29:39+02:00"/>
+          <Revision version="2026.1"/>
+          <Corporation author="VI-grade" URI="http://www.vi-grade.com"/>
+          <Author user="mcavalletti" name="-unknown name-"/>
+          <Environment hostName="VITPGD00025" operatingSystem="MS Windows NT 10.0"/>
+          <Application name="VI-CarRealTime" version="2026.1"/>
+     </afc:Bibliography>
+     <afc:Units>
+          <afc:UnitSetting name="angle" current="degree"/>
+          <afc:UnitSetting name="current" current="ampere"/>
+          <afc:UnitSetting name="force" current="newton"/>
+          <afc:UnitSetting name="length" current="mm"/>
+          <afc:UnitSetting name="luminosity" current="candela"/>
+          <afc:UnitSetting name="mass" current="kilogram"/>
+          <afc:UnitSetting name="quantity" current="mole"/>
+          <afc:UnitSetting name="solidAngle" current="steradian"/>
+          <afc:UnitSetting name="temperature" current="kelvin"/>
+          <afc:UnitSetting name="time" current="second"/>
+     </afc:Units>
+     <Component active="true" userDefined="false">
+          <Differential name="rearDifferential" active="true" userDefined="false" activeFlag="true" inertia="100.0" driveRatio="3.36" method="locked" LSD_C0_pos="10.0" LSD_C0_neg="10.0" LSD_C2="0.8" LSD_C3="0.5" detroitLocker="false" efficiency="1.0" tripotOuter1="(-2920.0 870.0 360.0)" tripotInner1="(-2925.0 325.0 360.0)" tripotOuter2="(-2920.0 -870.0 360.0)" tripotInner2="(-2925.0 -325.0 360.0)" shaftReactionComputation="false" torqueReactionBody="Chassis" torqueReactionBodyName="chassis" frontTorqueReactionDirection="No Torque Reaction" rearTorqueReactionDirection="No Torque Reaction">
+               <CRTSuspensionData name="LSD_C1" active="true" userDefined="false" method="table" constant="0" mirror="none" scaleFactor="1.0">
+                    <Spline3d name="table" active="true" userDefined="false" interpolation_method="akima" xLabel="Differential Input Torque" xUnit="torque" datablock="Limited Slip Differential C1">
+                         <afc:VectorAttribute name="x_data">
+                           -1000000 -600000 -400000 -200000 -50000 -10000 0 10000 50000 200000 400000 600000 1000000
+                         </afc:VectorAttribute>
+                         <afc:VectorAttribute name="y_data">
+                           0.2 0.2 0.2 0.2 0.1 0 0 0 0.1 0.3 0.3 0.3 0.3
+                         </afc:VectorAttribute>
+                         <afc:VectorAttribute name="z_data">
+                           0
+                         </afc:VectorAttribute>
+                    </Spline3d>
+               </CRTSuspensionData>
+               <Spline2d name="userSpline" active="true" userDefined="false" interpolation_method="akima" xLabel="Delta Angular Velocity" yLabel="Differential Torque" xUnit="angular_velocity" yUnit="torque">
+                 <![CDATA[
+           -540        -9288000
+           -510        -7288000
+           -480        -5288000
+           -450        -3288000
+           -426        -1688000
+           -414        -1248000
+           -390        -1088000
+           -360         -888000
+           -330         -688000
+           -300         -488000
+           -270         -288000
+           -246         -128000
+           -234          -84000
+           -210          -68000
+           -180          -48000
+           -150          -28000
+           -126          -12000
+           -114           -7600
+            -90           -6000
+            -60           -4000
+            -30           -2000
+              0               0
+             30            2000
+             60            4000
+             90            6000
+            114            7600
+            126           12000
+            150           28000
+            180           48000
+            210           68000
+            234           84000
+            246          128000
+            270          288000
+            300          488000
+            330          688000
+            360          888000
+            390         1088000
+            414         1248000
+            426         1688000
+            450         3288000
+            480         5288000
+            510         7288000
+            540         9288000
+]]>
+               </Spline2d>
+               <CRTSideShaft name="sideshaft_left" active="true" userDefined="false" activeFlag="false" inertia="1.0" stiffness="1.0" dampingMode="damping" damping="1.0" dampingRatio="0.01"/>
+               <CRTSideShaft name="sideshaft_right" active="true" userDefined="false" activeFlag="false" inertia="1.0" stiffness="1.0" dampingMode="damping" damping="1.0" dampingRatio="0.01"/>
+          </Differential>
+     </Component>
+</afc>

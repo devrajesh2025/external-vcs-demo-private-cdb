@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<afc xmlns="http://www.mscsoftware.com/:vfc" xmlns:afc="http://www.mscsoftware.com/:afc">
+     <afc:Bibliography>
+          <File schema="afc" version="2.0.0.0" URI="mdids://private/subsystems.tbl/vicrt_demo_actuator.xml" publicationDate="2025-09-24 15:27:02+02:00"/>
+          <Revision version="2026.1" derivedFrom="1"/>
+          <Corporation author="VI-grade" URI="http://www.vi-grade.com"/>
+          <Author user="mcavalletti" name="-unknown name-"/>
+          <Environment hostName="VITPGD00025" operatingSystem="MS Windows NT 10.0"/>
+          <Application name="VI-CarRealTime" version="2026.1"/>
+     </afc:Bibliography>
+     <afc:Units>
+          <afc:UnitSetting name="angle" current="degree"/>
+          <afc:UnitSetting name="current" current="ampere"/>
+          <afc:UnitSetting name="force" current="newton"/>
+          <afc:UnitSetting name="length" current="mm"/>
+          <afc:UnitSetting name="luminosity" current="candela"/>
+          <afc:UnitSetting name="mass" current="kilogram"/>
+          <afc:UnitSetting name="quantity" current="mole"/>
+          <afc:UnitSetting name="solidAngle" current="steradian"/>
+          <afc:UnitSetting name="temperature" current="kelvin"/>
+          <afc:UnitSetting name="time" current="second"/>
+     </afc:Units>
+     <Subsystem name="vicrt_demo_actuator" active="true" userDefined="false">
+          <CRTPointPointActuator name="Point2Point_force" active="true" userDefined="true" activeFlag="false">
+               <CRTMarkerStd name="iMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="jMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="refMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+          </CRTPointPointActuator>
+          <CRTPointForceActuator name="Point_force" active="true" userDefined="true" activeFlag="true" direction="Y" customActiveFlag="true" force="(step(time(), 1, 1.5,0,1)-step(time(), 2.5, 3.5,0,1))*500*wind_gust_scaling">
+               <CRTMarkerStd name="iMarker" active="true" userDefined="false" location="(1566.29 0 413.404)" bodyName="front_chassis">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="jMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="refMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+          </CRTPointForceActuator>
+          <CRTPointTorqueActuator name="Point_torque" active="true" userDefined="true" activeFlag="false" direction="Z">
+               <CRTMarkerStd name="iMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="jMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="refMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+          </CRTPointTorqueActuator>
+          <CRTGeneralActuator name="General_force" active="true" userDefined="true" activeFlag="false">
+               <CRTMarkerStd name="iMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="jMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="refMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+          </CRTGeneralActuator>
+          <CRTActuatorBase name="__dummy__" active="false" userDefined="false" activeFlag="false">
+               <CRTMarkerStd name="iMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="jMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+               <CRTMarkerStd name="refMarker" active="true" userDefined="false" location="(0 0 0)" bodyName="ground">
+                    <Orientation name="orientation" active="true" userDefined="false" type="euler_angles" xp="(0 0 0)" zp="(0 0 0)" euler="(0 0 0)"/>
+               </CRTMarkerStd>
+          </CRTActuatorBase>
+          <CRTParameterVariable name="__dummy__" active="false" userDefined="false" value="0"/>
+          <CRTStateVariable name="__dummy__" description="State Variable" active="false" userDefined="false"/>
+          <CRTMeasure name="__dummy__" description="Measure" active="false" userDefined="false" guess="0"/>
+          <CRTSpline name="__dummy__" active="true" userDefined="false" interpolation_method="akima" extrapolationMethod="linear">
+            <![CDATA[
+         -50000               0
+         -20000               0
+              0               0
+          20000               0
+          50000               0
+]]>
+          </CRTSpline>
+          <CRTUserInput name="__dummy__" description="User Input" active="false" userDefined="false" activeFlag="true" outputFlag="false" method="Select"/>
+          <CRTParameterVariable name="wind_gust_scaling" active="true" userDefined="true" value="0">
+               <Comment userDefined="false">
+                 <![CDATA[]]>
+               </Comment>
+          </CRTParameterVariable>
+     </Subsystem>
+</afc>
